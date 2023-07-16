@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header('Location: produtos.php');
         exit;
     } else {
-        echo "Erro ao criar o produto: " . $conexao->error;
+        echo "Erro ao criar o produto: ";
     }
 }
 ?>
