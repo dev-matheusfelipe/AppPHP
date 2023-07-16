@@ -39,31 +39,39 @@ if ($result->num_rows == 1) {
 </head>
 
 <style>
-    a{
-        title
+    .centralizado {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 </style>
 
 <body>
     <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand">Matheus Felipe</a>
+            <a class="navbar-brand" href="https://github.com/dev-matheusfelipe/" target="_blank" data-toggle="tooltip"
+                data-placement="top" title='Acesse o meu GitHub'>
+                <i class="fa-brands fa-github"></i> Dev Matheus Felipe
+            </a>
             <div class="d-flex">
                 <li class="nav-item" style="list-style: none;">
-                    <a class='btn btn-dark text-white' href='config.php' data-toggle="tooltip" data-placement="bottom" title='Configuração'>
+                    <a class='btn btn-dark text-white' href='config.php' data-toggle="tooltip" data-placement="bottom"
+                        title='Configuração'>
                         <i class="fa-solid fa-gear"></i>
                     </a>
                 </li>
                 <li class="nav-item" style="list-style: none; margin-left: 10px;">
-                    <a href="logout.php" class="btn btn-danger" data-toggle="tooltip" data-placement="bottom" title='Sair'>
+                    <a href="logout.php" class="btn btn-danger" data-toggle="tooltip" data-placement="bottom"
+                        title='Sair'>
                         <i class="fa-solid fa-right-to-bracket"></i>
                     </a>
                 </li>
- 
+
             </div>
         </div>
     </nav>
-    <div class="container text-center mt-5">
+    <div class="container text-center mb-5 mt-5">
         <h1>Configuração</h1>
         <p class="text-info">Escolha a ação desejada</p>
         <table class="table">
@@ -85,36 +93,48 @@ if ($result->num_rows == 1) {
                 </td>
                 <td>
                     <a class='btn btn-sm btn-warning text-white'
-                        href='editar_usuario.php?id=<?php echo $usuario['id']; ?>' data-toggle="tooltip" data-placement="top" title='Editar'>
+                        href='editar_usuario.php?id=<?php echo $usuario['id']; ?>' data-toggle="tooltip"
+                        data-placement="top" title='Editar'>
                         <i class="fa-solid fa-pen-to-square"></i>
                     </a>
 
                     <a class='btn btn-sm btn-danger' href='excluir_usuario.php?id=<?php echo $usuario['id']; ?>'
-                    data-toggle="tooltip" data-placement="top" title='Deletar'>
+                        data-toggle="tooltip" data-placement="top" title='Deletar'>
                         <i class="fa-solid fa-trash"></i>
                     </a>
 
                 </td>
             </tr>
         </table>
-        <p class="text-danger text-center mt-5"><b>*</b>Cuidado ao apertar o botão excluir, você pode deletar o seu usuario.</p>
-        <a class='btn btn-info text-white' href='produtos.php' data-toggle="tooltip" data-placement="top" title='Voltar'>
+        <p class="text-danger text-center mt-5"><b>*</b>Cuidado ao apertar o botão excluir, você pode deletar o seu
+            usuario.</p>
+        <a class='btn btn-info text-white' href='produtos.php' data-toggle="tooltip" data-placement="top"
+            title='Voltar'>
             <i class="fa-solid fa-arrow-left"></i>
         </a>
-    </div>  
-  
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="text-center text-lg-start bg-light text-muted fixed-bottom">
+        <!-- Copyright -->
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+            © 2021 Copyright:
+            <a class="text-reset fw-bold" href="https://github.com/dev-matheusfelipe/">Dev Matheus Felipe</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous">
-    </script>
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+        </script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
-        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous">
-    </script>
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+        </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
-        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous">
-    </script>
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+        </script>
     <script>
         $(function () {
             $('[data-toggle="tooltip"]').tooltip()

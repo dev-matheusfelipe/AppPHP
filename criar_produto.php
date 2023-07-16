@@ -70,6 +70,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <input type="number" class="form-control" id="quantidade" name="quantidade" required>
             </div>
             <button type="submit" class="btn btn-primary">Criar produto</button>
+            <a class='btn btn-warning text-white' href='produtos.php' title='Cancelar'>
+                Cancelar
+            </a>
         </form>
 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
