@@ -1,6 +1,6 @@
 <?php
 
-    $dbHost = 'containers-us-west-21.railway.app';
+    $dbHost = 'containers-us-west-16.railway.app';
     $dbUsername = 'root';
     $dbPassword = 'RyKRpjWsyFcLLWyZthvS';
     $dbName = 'railway';
