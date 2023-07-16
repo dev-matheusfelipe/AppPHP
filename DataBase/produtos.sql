@@ -1,0 +1,22 @@
+INSERT INTO produto (id_produto, nome, descricao, valor, quantidade)
+VALUES
+  (1, 'Camiseta', 'Camiseta de algodão preta', 29.99, 50),
+  (2, 'Calça Jeans', 'Calça jeans azul clara', 49.99, 30),
+  (3, 'Tênis', 'Tênis esportivo preto e branco', 79.99, 20),
+  (4, 'Bolsa', 'Bolsa de couro marrom', 59.99, 15),
+  (5, 'Relógio', 'Relógio analógico dourado', 99.99, 10),
+  (6, 'Óculos de sol', 'Óculos de sol estilo aviador', 39.99, 25),
+  (7, 'Celular', 'Smartphone Android', 499.99, 5),
+  (8, 'Notebook', 'Notebook de última geração', 999.99, 3),
+  (9, 'Tablet', 'Tablet com tela de alta definição', 299.99, 8),
+  (10, 'Câmera', 'Câmera digital de 20 megapixels', 199.99, 12),
+  (11, 'Fones de ouvido', 'Fones de ouvido sem fio', 79.99, 15),
+  (12, 'Mouse', 'Mouse óptico para computador', 19.99, 30),
+  (13, 'Teclado', 'Teclado mecânico para jogos', 49.99, 20),
+  (14, 'Monitor', 'Monitor LED de 24 polegadas', 199.99, 10),
+  (15, 'Impressora', 'Impressora multifuncional', 149.99, 8),
+  (16, 'Cadeira', 'Cadeira ergonômica para escritório', 149.99, 10),
+  (17, 'Mesa', 'Mesa de madeira para computador', 99.99, 15),
+  (18, 'Tapete', 'Tapete decorativo para sala', 29.99, 20),
+  (19, 'Quadro', 'Quadro abstrato para decoração', 39.99, 10),
+  (20, 'Luminária', 'Luminária de mesa com LED', 19.99, 25);
