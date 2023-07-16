@@ -94,8 +94,8 @@ if (isset($_GET['termo_busca'])) {
             </button>
 
             <div class="d-flex align-items-end">
-                <a class="btn btn-info px-3" href="criar_produto.php" role="button" data-toggle="tooltip" data-placement="bottom"
-                    title='Criar produto'><i class="fab fa-plus"></i>
+                <a class="btn btn-info px-3" href="criar_produto.php" role="button" data-toggle="tooltip"
+                    data-placement="bottom" title='Criar produto'><i class="fab fa-plus"></i>
                 </a>
             </div>
         </div>
@@ -164,8 +164,18 @@ if (isset($_GET['termo_busca'])) {
             } ?>
         </table>
 
-
     </div>
+
+    <!-- Footer -->
+    <footer class="text-center text-lg-start bg-light text-muted fixed-bottom">
+        <!-- Copyright -->
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+            © 2023 Copyright:
+            <a class="text-reset fw-bold" href="https://github.com/dev-matheusfelipe/">Dev Matheus Felipe</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
         </script>
