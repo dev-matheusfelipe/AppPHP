@@ -17,6 +17,16 @@ if (!isset($_SESSION['usuario'])) {
 // Obter o nome do usuário logado
 $nomeUsuario = $_SESSION['usuario']['nome'];
 
+// Verificar se o formulário de busca foi enviado
+if (isset($_GET['termo_busca'])) {
+    $termoBusca = $_GET['termo_busca'];
+    // Listar produtos com base no termo de busca
+    $sql = "SELECT * FROM produto WHERE nome LIKE '%$termoBusca%'";
+} else {
+    // Listar todos os produtos caso não haja busca
+    $sql = "SELECT * FROM produto";
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -28,6 +38,17 @@ $nomeUsuario = $_SESSION['usuario']['nome'];
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/f2c527850f.js" crossorigin="anonymous"></script>
 </head>
+
+<style>
+    .secund-nav {
+        border-top: 1px solid #f1eeee;
+        border-bottom: 1px solid #e7e5e5;
+    }
+
+    .mbt {
+        border-bottom: 1px solid #e7e5e5;
+    }
+</style>
 
 <body>
     <nav class="navbar navbar-light bg-light">
@@ -53,17 +74,47 @@ $nomeUsuario = $_SESSION['usuario']['nome'];
         </div>
     </nav>
 
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light secund-nav">
+        <!-- Container wrapper -->
+        <div class="container-fluid">
+            <!-- Navbar brand -->
+            <span class="navbar-brand mb-0 h1">Sistema PHP</span>
+
+            <form class="form-inline justify-content-center" action="produtos.php" method="GET">
+                <input type="text" class="form-control mb-2 mr-sm-2" name="termo_busca" placeholder="Buscar produto">
+                <button type="submit" class="btn btn-primary mb-2">Buscar</button>
+            </form>
+
+            <!-- Toggle button -->
+            <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+                data-mdb-target="#navbarButtonsExample" aria-controls="navbarButtonsExample" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <div class="d-flex align-items-end">
+                <a class="btn btn-info px-3" href="criar_produto.php" role="button" data-toggle="tooltip" data-placement="bottom"
+                    title='Criar produto'><i class="fab fa-plus"></i>
+                </a>
+            </div>
+        </div>
+        <!-- Container wrapper -->
+    </nav>
+    <!-- Navbar -->
+
     <div class="container">
-        <div class="container text-center mb-4 mt-4">
+        <div class="container text-center mt-5 mb-5 mbt">
             <!-- Exibir o nome do usuário -->
             <h2>Bem-vindo,
                 <?php echo '<span class="text-primary">' . $nomeUsuario . '</span>'; ?>!
             </h2>
         </div>
 
-        <h1 class="text-center mt-5">Lista de Produtos</h1>
-        <p class="text-info text-center">Todos os produtos em estoque</p>
-        <br><br>
+        <div class="container mt-5">
+            <h1 class="text-center">Lista de Produtos</h1>
+            <p class="text-info text-center">Todos os produtos em estoque</p>
+        </div>
         <table class="table">
             <tr>
                 <th>ID</th>
@@ -76,7 +127,7 @@ $nomeUsuario = $_SESSION['usuario']['nome'];
             <?php
             // Verificando se a lista está vazia
             if ($result->num_rows === 0) {
-                echo "<h3 class='text-center p-3 text-danger'> Ainda não existe produto aqui!  '-'</h3>";
+                echo "<h3 class='text-center p-3 text-danger'> Ainda não existe produto aqui!</h3>";
             } else {
                 // Caso a lista não esteja vazia, exibe os produtos
                 while ($row = $result->fetch_assoc()): ?>

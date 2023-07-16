@@ -66,7 +66,7 @@ if (isset($_GET['id_produto'])) {
 </style>
 <body>
     <div class="container centralizado">
-        <h1>Editar Produto</h1>
+        <h1 class="text-center">Editar Produto</h1>
         <!-- Formulário de edição -->
         <form action="" method="POST">
             <input type="hidden" name="id_produto" value="<?php echo $produto['id_produto']; ?>">
