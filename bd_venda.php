@@ -2,9 +2,9 @@
 
     $dbHost = 'containers-us-west-21.railway.app';
     $dbUsername = 'root';
-    $dbPassword = 'ZFBxm586SJGtYJESRlxO';
+    $dbPassword = 'RyKRpjWsyFcLLWyZthvS';
     $dbName = 'railway';
-    $dbPort = 6994;
+    $dbPort = 5914;
     
     $conexao = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName, $dbPort);
 
